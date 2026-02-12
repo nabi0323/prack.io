@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сотрудники — Детский сад «Колокольчик»</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fef9f4;
+            color: #2d3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6ba6d9, #4a89c1);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #4a89c1;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #6ba6d9;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .employees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .employee-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .employee-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 35px rgba(74, 137, 193, 0.15);
+        }
+
+        .employee-avatar {
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        .employee-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d3e50;
+            margin-bottom: 5px;
+        }
+
+        .employee-position {
+            color: #4a89c1;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .employee-desc {
+            color: #5a6e7e;
+            margin-top: 10px;
+        }
+
+        .employee-experience {
+            margin-top: 10px;
+            font-size: 15px;
+            background: #e8f0fa;
+            padding: 8px;
+            border-radius: 30px;
+        }
+
+        footer {
+            background: #2d3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Детский сад «Колокольчик»</h1>
+                <p>г. Буйнакск, жилмассив Западный</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="employees.html" class="active">Сотрудники</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Наш коллектив</h2>
+            <div class="employees-grid">
+                
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍🏫</div>
+                    <div class="employee-name">Магомедова Патимат Абдулаевна</div>
+                    <div class="employee-position">Заведующий ДОУ</div>
+                    <div class="employee-experience">Стаж: 28 лет</div>
+                    <div class="employee-desc">Отличник образования РД, высшая категория</div>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍🏫</div>
+                    <div class="employee-name">Гаджиева Заира Магомедовна</div>
+                    <div class="employee-position">Старший воспитатель</div>
+                    <div class="employee-experience">Стаж: 20 лет</div>
+                    <div class="employee-desc">Разработчик инновационных методик</div>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-avatar">🧑‍🏫</div>
+                    <div class="employee-name">Абдурахманов Расул Гаджиевич</div>
+                    <div class="employee-position">Инструктор по физкультуре</div>
+                    <div class="employee-experience">Стаж: 12 лет</div>
+                    <div class="employee-desc">КМС по дзюдо, секция самбо</div>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍🎨</div>
+                    <div class="employee-name">Алиева Джамиля Рашидовна</div>
+                    <div class="employee-position">Музыкальный руководитель</div>
+                    <div class="employee-experience">Стаж: 16 лет</div>
+                    <div class="employee-desc">Лауреат республиканских конкурсов</div>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍⚕️</div>
+                    <div class="employee-name">Ибрагимова Айшат Магомедовна</div>
+                    <div class="employee-position">Медицинская сестра</div>
+                    <div class="employee-experience">Стаж: 22 года</div>
+                    <div class="employee-desc">Высшая категория, вакцинопрофилактика</div>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-avatar">🧑‍💻</div>
+                    <div class="employee-name">Алиев Шамиль Рамазанович</div>
+                    <div class="employee-position">Системный администратор</div>
+                    <div class="employee-experience">Стаж: 7 лет</div>
+                    <div class="employee-desc">1С:Предприятие, обслуживание ЛВС</div>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍🍳</div>
+                    <div class="employee-name">Мамаева Асият Гусейновна</div>
+                    <div class="employee-position">Заведующий хозяйством</div>
+                    <div class="employee-experience">Стаж: 15 лет</div>
+                    <div class="employee-desc">Организация питания, складской учёт</div>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍💼</div>
+                    <div class="employee-name">Абдуллаева Наида Камиловна</div>
+                    <div class="employee-position">Бухгалтер</div>
+                    <div class="employee-experience">Стаж: 10 лет</div>
+                    <div class="employee-desc">1С:Бухгалтерия, расчёт зарплаты</div>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍🏫</div>
+                    <div class="employee-name">Омарова Хадижат Алиевна</div>
+                    <div class="employee-position">Воспитатель (подготовительная группа)</div>
+                    <div class="employee-experience">Стаж: 18 лет</div>
+                    <div class="employee-desc">Подготовка к школе, логопедический уклон</div>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍🏫</div>
+                    <div class="employee-name">Расулова Сакинат Магомедовна</div>
+                    <div class="employee-position">Воспитатель (ясельная группа)</div>
+                    <div class="employee-experience">Стаж: 14 лет</div>
+                    <div class="employee-desc">Раннее развитие, адаптация</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Детский сад «Колокольчик», г. Буйнакск</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Сайт разработан студентом-практикантом, 09.02.07, 2026 г.</p>
+        </div>
+    </footer>
+</body>
+</html>
